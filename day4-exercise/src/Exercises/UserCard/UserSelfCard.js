@@ -1,28 +1,28 @@
 import React from 'react';
-import style from './UserSelfCard.module.css';
+import classnames from 'classnames';
+import styles from './UserSelfCard.module.scss';
 
-const UserSelfCard = ({ user }) => {
+const UserSelfCard = ({ user, secondary = false, hoverable = false }) => {
   return (
-    
-    <div className={style.container}>
-      
-      <div className={style.d1}> 
-        <img className={style.img} src="https://randomuser.me/api/portraits/men/31.jpg"/>
-        <div className={style.d11}>
-          <p className={style.p1}>{user.name}</p>
-          <p className={style.p2}>{user.surName}</p>
+    <div className={styles.container}>
+      <div
+        className={classnames(styles.card, styles.selfCard, {
+          [styles.secondary]: secondary,
+          [styles.hoverable]: hoverable
+        })}>
+        <img className={styles.image} src={user.image} />
+        <div className={styles.imageDescription}>
+          <p>{user.name}</p>
+          <p>{user.surName}</p>
+        </div>
+        <div className={styles.details}>
+          <span>{user.gender}</span>
+          <span className={styles.bullet} />
+          <span>{user.age}</span>
         </div>
       </div>
-
-      <div className={style.d2}>
-        <p>{user.gender}</p>
-        <p>.</p>
-        <p>{user.age}</p>
-      </div>
-      
     </div>
-    
-
   );
+  return null;
 };
 export default UserSelfCard;
