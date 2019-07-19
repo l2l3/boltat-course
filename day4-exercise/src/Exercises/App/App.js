@@ -6,12 +6,11 @@ import UserSelfCard from '../UserCard/UserSelfCard';
 import { ReactComponent as BackButton } from '../../assets/images/back.svg';
 
 const App = () => {
- // return null;
- return(
-  <UserSelfCard/>
+  return null;
+
   
   
- );
+
 };
 
 export default App;
