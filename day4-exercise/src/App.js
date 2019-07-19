@@ -10,9 +10,15 @@ import { Example as Exercise4 } from './Exercises/App';
 function App() {
   return (
     <div className={styles.page}>
+<<<<<<< HEAD
       <Exercise1 />
       <Exercise2 />
       {/* <Exercise3 /> */}
+=======
+      {/* <Exercise1 /> */}
+      {/* <Exercise2 /> */}
+      <Exercise3 />
+>>>>>>> 1e0042e705b0b5bb1537ae163c860b22d44223ea
       {/* <Exercise4 /> */}
     </div>
   );
